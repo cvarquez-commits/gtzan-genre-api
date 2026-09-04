@@ -1,0 +1,10 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch
+fastapi
+uvicorn[standard]
+python-multipart
+ultralytics>=8.2.0
+librosa>=0.10.0
+numpy
+pillow
+soundfile
