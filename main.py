@@ -120,7 +120,7 @@ async def predict(file: UploadFile = File(...)):
 
         img = melspec_image(seg, sr)
         result = model.predict(img, verbose=False)[0]
-        names = result.names
+        names = {idx: name.capitalize() for idx, name in result.names.items()}
         probs = result.probs.data.tolist()
         top_name = names[result.probs.top1]
         top_conf = float(result.probs.top1conf)
